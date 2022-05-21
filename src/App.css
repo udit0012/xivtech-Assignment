@@ -1,38 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.container {
+  width: 50%;
+}
+.maintitle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 3rem 0;
+}
+.card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "PT Serif", serif;
+}
+.detailbox {
+  width: 100%;
+}
+.mr-8 {
+  margin-right: 8rem;
+}
+.imgbox {
+  display: block;
+  width: 100%;
+  height: 40vh;
+  margin-bottom: 2.5rem;
+}
+.imgboxmobile {
+  display: none;
+}
+.image {
+  width: 100%;
+  height: 100%;
+}
+.title {
+  font-size: 300%;
+  font-weight: 600;
+}
+.desc {
+  font-size: 1.5rem;
+  color: rgb(91, 91, 91);
+}
+.btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 900;
+  left: 0;
+  margin-bottom: 0.5rem;
+}
+.btn span {
+  margin: 0 1rem;
+  position: relative;
+}
+.btn:hover span {
+  animation: translate 0.5s;
+}
+.darkbtn {
+  font-size: 1.2rem;
+  background-color: black;
   color: white;
+  padding: 1.3rem 2.3rem;
+  margin: 6rem 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.3s;
 }
-
-.App-link {
-  color: #61dafb;
+.darkbtn:hover {
+  color: black;
+  background: white;
+  border: 2px solid black;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes translate {
+  0% {
+    left: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    left: 0rem;
+  }
+}
+@media screen and (max-width: 1264px) {
+  .container {
+    width: 100%;
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    margin: 2rem 0;
+  }
+  .container {
+    width: 100%;
+    padding: 2rem;
+  }
+  .imgbox {
+    display: none;
+  }
+  .imgboxmobile {
+    display: block;
+  }
+  .title {
+    font-size: 200%;
+    font-weight: 400;
+    margin: 3rem 0;
+  }
+  .desc {
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    margin: 1rem 0;
+  }
+  .btn {
+    color: rgb(38, 132, 255);
+    position: relative;
+    margin-top: 2rem;
+    transition: 0.1s;
+  }
+  .btn:hover {
+    color: rgb(56, 47, 41);
+  }
+  .btn span {
+    color: black;
+  }
+  .btn:hover span {
+    animation: none;
+  }
+  .mr-8 {
+    margin-right: 0;
+  }
+  .darkbtn {
+    font-size: 1.1rem;
+    padding: 1.1rem 2rem;
+    margin: 3.5rem;
   }
 }
